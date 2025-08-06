@@ -3,20 +3,14 @@ import folium
 from streamlit_folium import st_folium
 
 def render_compost_map():
-    # Sample data
-    data = {
-        "name": ["KLCC"],
-        "latitude": [3.1579],
-        "longitude": [101.7123],
-        "address": ["Kuala Lumpur City Centre, 50088 Kuala Lumpur"]
-    }
-    df = pd.DataFrame(data)
+    # Load the dataset
+    df = pd.read_csv("FWM_Facilities.csv")
 
-    # Center map view
+    # Create the map
     map_center = [df["latitude"].mean(), df["longitude"].mean()]
-    m = folium.Map(location=map_center, zoom_start=17)
+    m = folium.Map(location=map_center, zoom_start=11)
 
-    # Add marker
+    # Add all markers
     for _, row in df.iterrows():
         folium.Marker(
             location=[row["latitude"], row["longitude"]],
@@ -25,5 +19,5 @@ def render_compost_map():
             icon=folium.Icon(color="green", icon="map-marker", prefix="fa")
         ).add_to(m)
 
-    # Display map
+    # Return the map
     return st_folium(m, width=700, height=500)
