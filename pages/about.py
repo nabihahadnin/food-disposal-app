@@ -13,7 +13,7 @@ def show_about():
     col1, col2 = st.columns([1,2]) 
 
     with col1:
-        st.image("https://raw.githubusercontent.com/hanashah-01/food-disposal-app/main/Compost%20cycle-bro.png", width=300)
+        st.image("https://raw.githubusercontent.com/nabihahadnin/food-disposal-app/main/img/Compost%20cycle-bro.png", width=300)
 
     with col2:
         st.markdown("#### What is Food Waste Disposal?")
@@ -52,7 +52,7 @@ def show_about():
     col3, col4 = st.columns([1,2]) 
 
     with col3:
-        st.image("https://raw.githubusercontent.com/hanashah-01/food-disposal-app/main/Volunteering-bro.png", width=300)
+        st.image("https://raw.githubusercontent.com/nabihahadnin/food-disposal-app/main/img/Volunteering-bro.png", width=300)
 
     with col4:
         st.markdown("#### How Food Waste Can Be Disposed Properly?")
