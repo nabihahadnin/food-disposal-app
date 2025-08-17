@@ -9,8 +9,6 @@ with open("style.css") as f:
 def show_map():
     st.markdown("#### Find Food Waste Disposal Centres Near You")
 
-    # Load the dataset
-    #df = pd.read_csv("data/FWM_Facilities.csv")
     #Added by FA - retrieved data directly
     sheet_name = 'Food%20Waste%20Management%20Centers'
     sheet_id = '1eOm00zBQOpfz9TnOQkIcmDWzUe-oJ-iBltIOJEF16vs'
