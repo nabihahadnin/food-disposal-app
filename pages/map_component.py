@@ -33,12 +33,7 @@ def show_map():
 
     # Form for user input
     with st.form("location_form"):
-        location = st.selectbox(
-            "Postcode",
-            df["postcode"].unique(),
-            index=None,
-            placeholder="Enter/Select your postcode",
-        )
+        location = st.text_input("Enter your postal code", placeholder="e.g., 63000")
         submit = st.form_submit_button("Find Centres")
 
     if submit:
